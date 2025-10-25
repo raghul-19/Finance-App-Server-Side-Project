@@ -1,0 +1,51 @@
+  @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Allan:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+  @import "tailwindcss";
+
+
+  @theme {
+    --font-anton: "Anton", sans-serif;
+    --font-allan: "Allan", serif;
+  }
+
+body {
+  font-family: "Outfit", sans-serif;
+  overflow-x: hidden;
+  background-color: #FCF7FB;
+}
+
+/* In your global styles */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.password-input::-ms-reveal,
+.password-input::-ms-clear {
+  display: none;
+}
+
+.password-input::-webkit-credentials-auto-fill-button,
+.password-input::-webkit-clear-button,
+.password-input::-webkit-password-toggle-button {
+  display: none;
+}
+
+/* Remove default blue background from Chrome autofill */
+input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: black !important;
+}
+
+/* Optional: Remove border color change on autofill */
+input:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
